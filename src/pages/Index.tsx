@@ -150,7 +150,7 @@ const Index = () => {
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src="https://cdn.poehali.dev/files/logoza.ru.png" alt="Эко-Тропинка" className="h-16" />
+            <img src="https://cdn.poehali.dev/files/logoza.ru (2).png" alt="Эко-Тропинка" className="h-20" />
           </div>
           <div className="hidden md:flex gap-6">
             <a href="#catalog" className="text-foreground hover:text-primary transition-colors">Товары</a>
@@ -465,7 +465,7 @@ const Index = () => {
       <footer className="bg-foreground text-background py-8">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <img src="https://cdn.poehali.dev/files/logoza.ru.png" alt="Эко-Тропинка" className="h-14 brightness-0 invert" />
+            <img src="https://cdn.poehali.dev/files/logoza.ru (2).png" alt="Эко-Тропинка" className="h-16 brightness-0 invert" />
           </div>
           <p className="text-background/80">
             © 2024 Эко-Тропинка. Устойчивое развитие для всех.
