@@ -107,6 +107,33 @@ const Index = () => {
     },
   ];
 
+  const team = [
+    {
+      name: 'Анна Зеленская',
+      role: 'Основатель и CEO',
+      bio: 'Эколог с 10-летним опытом. Запустила проект после путешествия по Скандинавии.',
+      icon: '👩🏻‍💼'
+    },
+    {
+      name: 'Дмитрий Лесной',
+      role: 'Эксперт по Zero Waste',
+      bio: 'Автор курсов и блога. Живёт без мусора уже 5 лет.',
+      icon: '👨🏻‍🏫'
+    },
+    {
+      name: 'Мария Чистова',
+      role: 'Координатор событий',
+      bio: 'Организатор экологических акций. Провела более 100 уборок.',
+      icon: '👩🏻‍🌾'
+    },
+    {
+      name: 'Сергей Травников',
+      role: 'Менеджер по закупкам',
+      bio: 'Отбирает только сертифицированные эко-товары от проверенных производителей.',
+      icon: '👨🏻‍💻'
+    },
+  ];
+
   const materialLabels: Record<string, string> = {
     bamboo: 'Бамбук',
     recycled: 'Переработанный',
@@ -122,9 +149,8 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="text-3xl">🌱</span>
-            <span className="text-2xl font-bold text-primary">Эко-Тропинка</span>
+          <div className="flex items-center gap-3">
+            <img src="https://cdn.poehali.dev/files/logoza.ru.png" alt="Эко-Тропинка" className="h-12" />
           </div>
           <div className="hidden md:flex gap-6">
             <a href="#catalog" className="text-foreground hover:text-primary transition-colors">Товары</a>
@@ -349,6 +375,27 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-foreground mb-4">Наша команда</h2>
+            <p className="text-muted-foreground text-lg">Люди, которые делают мир чище</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {team.map((member, idx) => (
+              <Card key={idx} className="hover:shadow-lg transition-all duration-300 hover-scale text-center">
+                <CardContent className="p-6">
+                  <div className="text-6xl mb-4">{member.icon}</div>
+                  <h3 className="text-xl font-semibold text-foreground mb-1">{member.name}</h3>
+                  <Badge variant="secondary" className="mb-3">{member.role}</Badge>
+                  <p className="text-sm text-muted-foreground">{member.bio}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="contacts" className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
@@ -385,6 +432,16 @@ const Index = () => {
                     <p className="text-muted-foreground">Москва, ул. Экологическая, д. 10</p>
                   </div>
                 </div>
+                <div className="mt-6 rounded-lg overflow-hidden border border-border">
+                  <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A64f1b6c7b5c4e4e8c5a4c4e4e4e4e4e4&amp;source=constructor"
+                    width="100%"
+                    height="300"
+                    frameBorder="0"
+                    title="Карта офиса"
+                    className="w-full"
+                  ></iframe>
+                </div>
                 <div className="pt-6 border-t border-border">
                   <p className="text-center text-muted-foreground mb-4">Следите за нами в соцсетях</p>
                   <div className="flex justify-center gap-4">
@@ -407,9 +464,8 @@ const Index = () => {
 
       <footer className="bg-foreground text-background py-8">
         <div className="container mx-auto px-4 text-center">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <span className="text-2xl">🌱</span>
-            <span className="text-xl font-bold">Эко-Тропинка</span>
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <img src="https://cdn.poehali.dev/files/logoza.ru.png" alt="Эко-Тропинка" className="h-10 brightness-0 invert" />
           </div>
           <p className="text-background/80">
             © 2024 Эко-Тропинка. Устойчивое развитие для всех.
